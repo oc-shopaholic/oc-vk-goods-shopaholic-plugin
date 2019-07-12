@@ -82,7 +82,7 @@ class Generate
             $bStatus = array_get($arResponse, 'response');
 
             if (!empty($arError) || ($bStatus !== null && !$bStatus)) {
-                $this->updateProduct($iProductId);
+                $this->deleteMethod($arProduct);
             }
         }
     }
