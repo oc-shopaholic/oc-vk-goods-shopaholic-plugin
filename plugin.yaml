@@ -5,3 +5,6 @@ plugin:
     icon: icon-upload
     homepage: ''
 permissions:
+    shopaholic-menu-vkontakte-export:
+        label: 'lovata.vkontakteshopaholic::lang.permission.vkontaktesettings'
+        tab: 'lovata.shopaholic::lang.tab.permissions'
