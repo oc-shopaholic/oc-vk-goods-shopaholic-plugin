@@ -1,12 +1,5 @@
 > Use **WELCOME** coupon to get an one-time 50% discount!
 
-## Overview
-
-Yandex Market for Shopaholic plugin for October CMS allows to:
-* **generates** export file in **YML** (Yandex Market Language) format containing products and additional required information
-* allows to **change** YML **file destionation**
-* provides **GUI** and **CLI** ways for YML file generation
-
 ## Installation
 
 ### Artisan
@@ -14,7 +7,7 @@ Yandex Market for Shopaholic plugin for October CMS allows to:
 Using the Laravel’s CLI is the fastest way to get started. Just run the following commands in a project’s root directory:
 
 ```bash
-php artisan plugin:install Lovata.YandexMarketShopaholic
+php artisan plugin:install Lovata.VkontakteShopaholic
 ```
 
 ### Composer
@@ -27,14 +20,12 @@ The complete official documentation of the plugin can be found [here](https://gi
 
 ## Configuration
 
-Go to `Settings` > `Export to Yandex.Market` to configure the plugin.
+Go to `Settings` > `Export to VKontakte` to configure the plugin.
 
-You can generate YML file this ways:
+You can export catalog this ways:
   
-1. using widget `Export catalog to Yandex.Market` on the October CMS dashboard
-2. by runnung `shopaholic:catalog_export.yandex_market` artisan command
-
-The generic file can be found here `storage/app/media/yandex_market.xml` by default.
+1. using widget `Export catalog to VKontakte` on the October CMS dashboard
+2. by runnung `shopaholic:catalog_export.vkontakte` artisan command
 
 ## Live demo
 
