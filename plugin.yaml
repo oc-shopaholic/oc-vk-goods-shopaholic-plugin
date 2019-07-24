@@ -2,6 +2,9 @@ plugin:
     name: 'lovata.vkontakteshopaholic::lang.plugin.name'
     description: 'lovata.vkontakteshopaholic::lang.plugin.description'
     author: Lovata
-    icon: icon-upload
+    icon: icon-vk
     homepage: ''
 permissions:
+    shopaholic-menu-vkontakte-export:
+        label: 'lovata.vkontakteshopaholic::lang.permission.vkontaktesettings'
+        tab: 'lovata.shopaholic::lang.tab.permissions'
