@@ -10,26 +10,20 @@ use Lovata\Shopaholic\Models\Offer;
  */
 class OfferModelHandler
 {
-    /** @var Offer */
-    protected $obElement;
-
     /**
-     * @param \Illuminate\Events\Dispatcher $obEvent
+     * Added event listeners
      */
-    public function subscribe($obEvent)
-    {
-        $this->extendModel();
-    }
-
-    /**
-     * Extend Model object
-     */
-    protected function extendModel()
+    public function subscribe()
     {
         Offer::extend(function ($obOffer) {
             /** @var Offer $obOffer */
+            $obOffer->fillable[] = 'preview_image_vkontakte';
+            $obOffer->fillable[] = 'images_vkontakte';
+
             $obOffer->attachOne['preview_image_vkontakte'] = 'System\Models\File';
             $obOffer->attachMany['images_vkontakte']       = 'System\Models\File';
+
+            $obOffer->addCachedField(['preview_image_vkontakte', 'images_vkontakte']);
         });
     }
 }

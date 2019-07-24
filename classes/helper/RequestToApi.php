@@ -3,11 +3,11 @@
 use Lovata\Shopaholic\Models\Product;
 
 /**
- * Class Generate
+ * Class RequestToApi
  * @package Lovata\VkontakteShopaholic\Classes\Helper
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  */
-class Generate
+class RequestToApi
 {
     const METHOD_CREATE_OR_UPDATE = 'create_or_update';
     const METHOD_DELETE           = 'delete';
@@ -61,11 +61,7 @@ class Generate
         $arImagesPathList  = array_pull($arProduct, 'images', []);
         $iProductId        = array_pull($arProduct, 'id');
 
-        array_set(
-            $arProduct,
-            'main_photo_id',
-            $this->getPhotoIdList([$sPreviewImagePath], true)
-        );
+        array_set($arProduct, 'main_photo_id', $this->getPhotoIdList([$sPreviewImagePath], true));
         array_set($arProduct, 'photo_ids', $this->getPhotoIdList($arImagesPathList));
 
         if (empty($iExternalVkId)) {

@@ -1,7 +1,7 @@
 <?php namespace Lovata\VKontakteShopaholic\Classes\Console;
 
 use Illuminate\Console\Command;
-use Lovata\VKontakteShopaholic\Classes\Helper\DataCollection;
+use Lovata\VKontakteShopaholic\Classes\Helper\ExportCatalogHelper;
 
 /**
  * Class CatalogExportForVkontakte
@@ -14,7 +14,7 @@ class CatalogExportForVkontakte extends Command
     /**
      * @var string command name.
      */
-    protected $name = 'shopaholic:catalog_export_to_vkontakte';
+    protected $name = 'shopaholic:catalog_export.vkontakte';
 
     /**
      * @var string The console command description.
@@ -23,11 +23,11 @@ class CatalogExportForVkontakte extends Command
 
     /**
      * Execute the console command.
-     * @throws \Throwable
+     * @throws
      */
     public function handle()
     {
-        $obDataCollection = new DataCollection();
-        $obDataCollection->generate();
+        $obDataCollection = new ExportCatalogHelper();
+        $obDataCollection->run();
     }
 }

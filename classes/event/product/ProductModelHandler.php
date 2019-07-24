@@ -10,26 +10,20 @@ use Lovata\Shopaholic\Models\Product;
  */
 class ProductModelHandler
 {
-    /** @var Product */
-    protected $obElement;
-
     /**
-     * @param \Illuminate\Events\Dispatcher $obEvent
+     * Extend Product model
      */
-    public function subscribe($obEvent)
-    {
-        $this->extendModel();
-    }
-
-    /**
-     * Extend Model object
-     */
-    protected function extendModel()
+    public function subscribe()
     {
         Product::extend(function ($obProduct) {
             /** @var Product $obProduct */
+            $obProduct->fillable[] = 'preview_image_vkontakte';
+            $obProduct->fillable[] = 'images_vkontakte';
+            $obProduct->fillable[] = 'active_vk';
+            $obProduct->fillable[] = 'external_vk_id';
+
             $obProduct->attachOne['preview_image_vkontakte'] = 'System\Models\File';
-            $obProduct->attachMany['images_vkontakte']       = 'System\Models\File';
+            $obProduct->attachMany['images_vkontakte'] = 'System\Models\File';
 
             $obProduct->addDynamicMethod('scopeActiveVK', function ($obQuery) {
                 return $obQuery->where('active_vk', true);
@@ -42,6 +36,8 @@ class ProductModelHandler
             $obProduct->addDynamicMethod('scopeIsNotEmptyExternalVkId', function ($obQuery) {
                 return $obQuery->whereNotNull('external_vk_id');
             });
+
+            $obProduct->addCachedField(['preview_image_vkontakte', 'images_vkontakte', 'active_vk', 'external_vk_id']);
         });
     }
 }

@@ -32,8 +32,8 @@ class Plugin extends PluginBase
     {
         return [
             'config' => [
-                'label'       => 'lovata.vkontakteshopaholic::lang.menu.vkontaktesettings',
-                'description' => '',
+                'label'       => 'lovata.vkontakteshopaholic::lang.menu.settings',
+                'description' => 'lovata.vkontakteshopaholic::lang.menu.settings_description',
                 'category'    => 'lovata.shopaholic::lang.tab.settings',
                 'icon'        => 'icon-upload',
                 'class'       => 'Lovata\VKontakteShopaholic\Models\VkontakteSettings',
@@ -64,7 +64,7 @@ class Plugin extends PluginBase
      */
     public function register()
     {
-        $this->registerConsoleCommand('shopaholic:catalog_export_to_vkontakte', CatalogExportForVkontakte::class);
+        $this->registerConsoleCommand('shopaholic:catalog_export.vkontakte', CatalogExportForVkontakte::class);
     }
 
     /**

@@ -5,25 +5,26 @@ use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
 /**
- * Class UpdateTableCategories01
+ * Class UpdateTableProductsAddVkFields
  * @package Lovata\BaseCode\Updates
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  */
-class UpdateTableCategories01 extends Migration
+class UpdateTableProductsAddVkFields extends Migration
 {
-    const TABLE = 'lovata_shopaholic_categories';
+    const TABLE = 'lovata_shopaholic_products';
 
     /**
      * Apply migration
      */
     public function up()
     {
-        if (!Schema::hasTable(self::TABLE) || Schema::hasColumns(self::TABLE, ['category_vk_id'])) {
+        if (!Schema::hasTable(self::TABLE) || Schema::hasColumns(self::TABLE, ['external_vk_id', 'active_vk'])) {
             return;
         }
 
         Schema::table(self::TABLE, function(Blueprint $obTable) {
-            $obTable->integer('category_vk_id')->nullable();
+            $obTable->boolean('active_vk')->default(0);
+            $obTable->string('external_vk_id')->nullable();
         });
     }
 
@@ -32,12 +33,12 @@ class UpdateTableCategories01 extends Migration
      */
     public function down()
     {
-        if (!Schema::hasTable(self::TABLE) || !Schema::hasColumns(self::TABLE, ['category_vk_id'])) {
+        if (!Schema::hasTable(self::TABLE) || !Schema::hasColumns(self::TABLE, ['external_vk_id', 'active_vk'])) {
             return;
         }
 
         Schema::table(self::TABLE, function(Blueprint $obTable) {
-            $obTable->dropColumn(['category_vk_id']);
+            $obTable->dropColumn(['external_vk_id', 'active_vk']);
         });
     }
 }

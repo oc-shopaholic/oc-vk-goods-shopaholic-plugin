@@ -1,7 +1,6 @@
 <?php namespace Lovata\VKontakteShopaholic\Classes\Event\Category;
 
 use Lovata\Shopaholic\Models\Category;
-use Lovata\VkontakteShopaholic\Classes\Helper\VkApi;
 
 /**
  * Class CategoryModelHandler
@@ -12,35 +11,15 @@ use Lovata\VkontakteShopaholic\Classes\Helper\VkApi;
 class CategoryModelHandler
 {
     /**
-     * @param \Illuminate\Events\Dispatcher $obEvent
+     * Added event listeners
      */
-    public function subscribe($obEvent)
-    {
-        $this->extendModel();
-    }
-
-    /**
-     * Extend Model object
-     */
-    protected function extendModel()
+    public function subscribe()
     {
         Category::extend(function ($obCategory) {
             /** @var Category $obCategory */
-            $obCategory->addDynamicMethod('getVkCategoryIdListOptions', function () {
+            $obCategory->fillable[] = 'category_vk_id';
 
-                $obVkApi = new VkApi();
-                $arResponseData = $obVkApi->marketGetCategories();
-
-                $arCategoryList = array_get($arResponseData, 'response.items', []);
-
-                if (empty($arCategoryList) || !is_array($arCategoryList)) {
-                    return [];
-                }
-
-                $arCategoryList = array_column($arCategoryList, 'name', 'id');
-
-                return $arCategoryList;
-            });
+            $obCategory->addCachedField(['category_vk_id']);
         });
     }
 }

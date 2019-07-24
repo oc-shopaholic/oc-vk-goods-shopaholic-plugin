@@ -15,6 +15,47 @@ use Lovata\VKontakteShopaholic\Models\VkontakteSettings;
 class ExtendOfferFieldsHandler extends AbstractBackendFieldHandler
 {
     /**
+     * Extend fields model
+     * @param \Backend\Widgets\Form $obWidget
+     */
+    protected function extendFields($obWidget)
+    {
+        $sCodeModelForImages = VkontakteSettings::getValue('code_model_for_images', '');
+        if ($sCodeModelForImages != VkontakteSettings::CODE_OFFER) {
+            return;
+        }
+
+        $arFields = [
+            'section_vkontakte' => [
+                'label' => 'lovata.vkontakteshopaholic::lang.field.section_vkontakte',
+                'tab'   => 'lovata.toolbox::lang.tab.images',
+                'type'  => 'section',
+                'span'  => 'full',
+            ],
+            'preview_image_vkontakte' => [
+                'label'     => 'lovata.toolbox::lang.field.preview_image',
+                'tab'       => 'lovata.toolbox::lang.tab.images',
+                'type'      => 'fileupload',
+                'span'      => 'left',
+                'required'  => true,
+                'mode'      => 'image',
+                'fileTypes' => 'jpeg,png',
+            ],
+            'images_vkontakte' => [
+                'label'     => 'lovata.toolbox::lang.field.images',
+                'type'      => 'fileupload',
+                'span'      => 'left',
+                'required'  => false,
+                'mode'      => 'image',
+                'tab'       => 'lovata.toolbox::lang.tab.images',
+                'fileTypes' => 'jpeg,png',
+            ],
+        ];
+
+        $obWidget->addTabFields($arFields);
+    }
+
+    /**
      * Get model class name
      * @return string
      */
@@ -30,54 +71,5 @@ class ExtendOfferFieldsHandler extends AbstractBackendFieldHandler
     protected function getControllerClass() : string
     {
         return Offers::class;
-    }
-
-    /**
-     * Extend fields model
-     * @param \Backend\Widgets\Form $obWidget
-     */
-    protected function extendFields($obWidget)
-    {
-        $this->addField($obWidget);
-    }
-
-    /**
-     * Remove fields model
-     * @param \Backend\Widgets\Form $obWidget
-     */
-    protected function addField($obWidget)
-    {
-        $arFields = [];
-
-        $sCodeModelForImages = VkontakteSettings::getValue('code_model_for_images', '');
-
-        if (!empty($sCodeModelForImages) && $sCodeModelForImages == VkontakteSettings::CODE_OFFER) {
-            $arFields['section_vkontakte'] = [
-                'label' => 'lovata.vkontakteshopaholic::lang.field.section_vkontakte',
-                'type'  => 'section',
-                'span'  => 'full',
-                'tab'   => 'lovata.toolbox::lang.tab.images',
-            ];
-            $arFields['preview_image_vkontakte'] = [
-                'label'     => 'lovata.toolbox::lang.field.preview_image',
-                'type'      => 'fileupload',
-                'span'      => 'full',
-                'required'  => true,
-                'mode'      => 'image',
-                'tab'       => 'lovata.toolbox::lang.tab.images',
-                'fileTypes' => 'jpeg,png',
-            ];
-            $arFields['images_vkontakte'] = [
-                'label'     => 'lovata.toolbox::lang.field.images',
-                'type'      => 'fileupload',
-                'span'      => 'full',
-                'required'  => false,
-                'mode'      => 'image',
-                'tab'       => 'lovata.toolbox::lang.tab.images',
-                'fileTypes' => 'jpeg,png',
-            ];
-        }
-
-        $obWidget->addTabFields($arFields);
     }
 }

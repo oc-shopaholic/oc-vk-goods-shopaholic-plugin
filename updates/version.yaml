@@ -1,6 +1,4 @@
-1.0.1:
+1.0.0:
     - 'Init plugin'
-1.0.2:
-    - 'Add external_vk_id, active_vk fields to lovata_shopaholic_products table, add categori_vk_id field to lovata_shopaholic_categories table'
-    - update_table_products_01.php
-    - update_table_categories_01.php
+    - update_table_products_add_vk_fields.php
+    - update_table_categories_add_vk_fields.php

@@ -73,7 +73,7 @@ class VkApi
 
     /**
      * Method market.add
-     *
+     * @param array $arData
      * @return array
      * @throws \GuzzleHttp\Exception\GuzzleException
      */

@@ -26,7 +26,8 @@ class ExportToXML extends ReportWidgetBase
      */
     public function onGenerateXMLForVkontakte()
     {
-        Artisan::call('shopaholic:catalog_export_to_vkontakte');
-        Flash::info(trans('lovata.vkontakteshopaholic::lang.message.export_is_complete'));
+        Artisan::call('shopaholic:catalog_export.vkontakte');
+
+        Flash::info(trans('lovata.vkontakteshopaholic::lang.message.export_is_completed'));
     }
 }

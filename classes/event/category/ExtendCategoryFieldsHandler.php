@@ -4,6 +4,7 @@ use Lovata\Toolbox\Classes\Event\AbstractBackendFieldHandler;
 
 use Lovata\Shopaholic\Models\Category;
 use Lovata\Shopaholic\Controllers\Categories;
+use Lovata\VkontakteShopaholic\Classes\Helper\VkApi;
 
 /**
  * Class ExtendCategoryFieldsHandler
@@ -13,6 +14,45 @@ use Lovata\Shopaholic\Controllers\Categories;
  */
 class ExtendCategoryFieldsHandler extends AbstractBackendFieldHandler
 {
+    /**
+     * Extend fields model
+     * @param \Backend\Widgets\Form $obWidget
+     */
+    protected function extendFields($obWidget)
+    {
+        $obWidget->addTabFields([
+            'category_vk_id' => [
+                'label'       => 'lovata.vkontakteshopaholic::lang.field.category_vk_id',
+                'type'        => 'dropdown',
+                'span'        => 'left',
+                'required'    => '0',
+                'showSearch'  => 'true',
+                'emptyOption' => 'lovata.toolbox::lang.field.empty',
+                'options'     => $this->getVkCategoryIdListOptions(),
+                'tab'         => 'lovata.toolbox::lang.tab.settings',
+            ],
+        ]);
+    }
+
+    /**
+     * Get categories frim VK API
+     */
+    protected function getVkCategoryIdListOptions()
+    {
+        $obVkApi = new VkApi();
+        $arResponseData = $obVkApi->marketGetCategories();
+
+        $arCategoryList = array_get($arResponseData, 'response.items', []);
+
+        if (empty($arCategoryList) || !is_array($arCategoryList)) {
+            return [];
+        }
+
+        $arCategoryList = array_column($arCategoryList, 'name', 'id');
+
+        return $arCategoryList;
+    }
+
     /**
      * Get model class name
      * @return string
@@ -29,34 +69,5 @@ class ExtendCategoryFieldsHandler extends AbstractBackendFieldHandler
     protected function getControllerClass() : string
     {
         return Categories::class;
-    }
-
-    /**
-     * Extend fields model
-     * @param \Backend\Widgets\Form $obWidget
-     */
-    protected function extendFields($obWidget)
-    {
-        $this->addField($obWidget);
-    }
-
-    /**
-     * Remove fields model
-     * @param \Backend\Widgets\Form $obWidget
-     */
-    protected function addField($obWidget)
-    {
-        $obWidget->addTabFields([
-            'category_vk_id' => [
-                'label' => 'lovata.vkontakteshopaholic::lang.field.category_vk_id',
-                'type' => 'dropdown',
-                'span' => 'left',
-                'required' => '0',
-                'showSearch' => 'true',
-                'emptyOption' => 'lovata.toolbox::lang.field.empty',
-                'options' => 'getVkCategoryIdListOptions',
-                'tab' => 'lovata.toolbox::lang.tab.settings',
-            ],
-        ]);
     }
 }

@@ -1,52 +1,23 @@
 fields:
 tabs:
     icons:
-        lovata.vkontakteshopaholic::lang.tab.store: icon-file-text-o
-        lovata.shopaholic::lang.tab.offer: icon-file-text-o
         lovata.toolbox::lang.tab.settings: icon-cogs
+        lovata.shopaholic::lang.tab.offer: icon-briefcase
     fields:
-        ### Store ###
-
         community_id:
             label: 'lovata.vkontakteshopaholic::lang.field.community_id'
             type: number
             span: left
             required: 1
-            tab: 'lovata.vkontakteshopaholic::lang.tab.store'
+            tab: 'lovata.toolbox::lang.tab.settings'
             placeholder: 'lovata.vkontakteshopaholic::lang.field.community_id'
-
         access_token_user:
             label: 'lovata.vkontakteshopaholic::lang.field.access_token_user'
             type: text
             span: left
             required: 1
-            tab: 'lovata.vkontakteshopaholic::lang.tab.store'
+            tab: 'lovata.toolbox::lang.tab.settings'
             placeholder: 'lovata.vkontakteshopaholic::lang.field.access_token_user'
-
-        ### Offer ###
-
-        code_model_for_images:
-            label: 'lovata.vkontakteshopaholic::lang.field.code_model_for_images'
-            type: radio
-            span: left
-            required: 1
-            options: getWhereToGetTheImagesOptions
-            tab: 'lovata.shopaholic::lang.tab.offer'
-        section_management_additional_fields_offer:
-            label: 'lovata.vkontakteshopaholic::lang.field.section_management_additional_fields_offer'
-            type: section
-            span: left
-            tab: 'lovata.shopaholic::lang.tab.offer'
-        field_images:
-            label: 'lovata.toolbox::lang.field.images'
-            type: checkbox
-            span: left
-            required: 0
-            tab: 'lovata.shopaholic::lang.tab.offer'
-            default: false
-
-        ### Settings ###
-
         queue_on:
             label: 'lovata.toolbox::lang.field.queue_on'
             type: checkbox
@@ -64,3 +35,22 @@ tabs:
                 action: show
                 field: queue_on
                 condition: checked
+        section_management_additional_fields_offer:
+            label: 'lovata.vkontakteshopaholic::lang.field.section_management_additional_fields_offer'
+            type: section
+            span: left
+            tab: 'lovata.shopaholic::lang.tab.offer'
+        code_model_for_images:
+            label: 'lovata.vkontakteshopaholic::lang.field.code_model_for_images'
+            type: dropdown
+            emptyOption: 'lovata.toolbox::lang.field.empty'
+            span: left
+            options: getGetImagesFromOptions
+            tab: 'lovata.shopaholic::lang.tab.offer'
+        field_images:
+            label: 'lovata.toolbox::lang.field.images'
+            type: checkbox
+            span: left
+            required: 0
+            tab: 'lovata.shopaholic::lang.tab.offer'
+            default: false

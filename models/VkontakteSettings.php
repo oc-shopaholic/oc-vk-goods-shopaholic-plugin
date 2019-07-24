@@ -1,5 +1,6 @@
 <?php namespace Lovata\VKontakteShopaholic\Models;
 
+use Lang;
 use October\Rain\Database\Traits\Validation;
 
 use Lovata\Toolbox\Models\CommonSettings;
@@ -20,7 +21,7 @@ class VkontakteSettings extends CommonSettings
 
     const SETTINGS_CODE = 'lovata_shopaholic_vkontakte_export_settings';
 
-    const CODE_OFFER   = 'offer';
+    const CODE_OFFER = 'offer';
     const CODE_PRODUCT = 'product';
 
     /**
@@ -49,11 +50,11 @@ class VkontakteSettings extends CommonSettings
      *
      * @return array
      */
-    public function getWhereToGetTheImagesOptions()
+    public function getGetImagesFromOptions()
     {
         return [
-            self::CODE_OFFER   => trans('lovata.shopaholic::lang.field.offer'),
-            self::CODE_PRODUCT => trans('lovata.toolbox::lang.field.product'),
+            self::CODE_OFFER   => Lang::get('lovata.shopaholic::lang.field.offer'),
+            self::CODE_PRODUCT => Lang::get('lovata.toolbox::lang.field.product'),
         ];
     }
 }

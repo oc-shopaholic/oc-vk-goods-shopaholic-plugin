@@ -1,7 +1,7 @@
 <?php namespace Lovata\VkontakteShopaholic\Classes\Queue;
 
 use Illuminate\Queue\Jobs\Job;
-use Lovata\VkontakteShopaholic\Classes\Helper\Generate;
+use Lovata\VkontakteShopaholic\Classes\Helper\RequestToApi;
 
 /**
  * Class VkApiQueue
@@ -28,7 +28,7 @@ class VkApiQueue
         $arData  = array_get($arQueueData, 'data', []);
         $sMethod = array_get($arQueueData, 'method');
 
-        $obGenerate = new Generate();
+        $obGenerate = new RequestToApi();
         $obGenerate->generate($arData, $sMethod);
 
         $obJob->delete();
