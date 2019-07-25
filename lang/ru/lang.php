@@ -1,10 +1,10 @@
 <?php return [
     'plugin'     => [
-        'name'        => 'Экспорт товаров во VKontakte',
+        'name'        => 'VK товары для Shopaholic',
         'description' => 'Интеграция с API VKontakte для выгрузки каталога',
     ],
     'menu'       => [
-        'vkontaktesettings' => 'Экспорта во VKontakte',
+        'vkgoodssettings' => 'Экспорта во VKontakte',
     ],
     'field'      => [
         'community_id'                               => 'Идентификатор сообщества',
@@ -23,7 +23,7 @@
         'export_catalog_to_api_for_vkontakte' => 'Экспорт каталога в API (Vkontakte)',
     ],
     'permission' => [
-        'vkontaktesettings' => 'Управление настройками экспорта во VKontakte',
+        'vkgoodssettings' => 'Управление настройками экспорта во VKontakte',
     ],
     'message'    => [
         'export_is_complete'            => 'Экспорт запущен',

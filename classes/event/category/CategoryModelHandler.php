@@ -1,11 +1,11 @@
-<?php namespace Lovata\VKontakteShopaholic\Classes\Event\Category;
+<?php namespace Lovata\VkGoodsShopaholic\Classes\Event\Category;
 
 use Lovata\Shopaholic\Models\Category;
 
 /**
  * Class CategoryModelHandler
  *
- * @package Lovata\VKontakteShopaholic\Classes\Event\Category
+ * @package Lovata\VkGoodsShopaholic\Classes\Event\Category
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  */
 class CategoryModelHandler

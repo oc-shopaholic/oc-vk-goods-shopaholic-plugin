@@ -7,7 +7,7 @@
 Using the Laravel’s CLI is the fastest way to get started. Just run the following commands in a project’s root directory:
 
 ```bash
-php artisan plugin:install Lovata.VkontakteShopaholic
+php artisan plugin:install Lovata.VkGoodsShopaholic
 ```
 
 ### Composer

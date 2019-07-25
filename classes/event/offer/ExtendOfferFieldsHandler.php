@@ -1,15 +1,15 @@
-<?php namespace Lovata\VKontakteShopaholic\Classes\Event\Offer;
+<?php namespace Lovata\VkGoodsShopaholic\Classes\Event\Offer;
 
 use Lovata\Toolbox\Classes\Event\AbstractBackendFieldHandler;
 
 use Lovata\Shopaholic\Models\Offer;
 use Lovata\Shopaholic\Controllers\Offers;
-use Lovata\VKontakteShopaholic\Models\VkontakteSettings;
+use Lovata\VkGoodsShopaholic\Models\VkGoodsSettings;
 
 /**
  * Class ExtendOfferFieldsHandler
  *
- * @package Lovata\VKontakteShopaholic\Classes\Event\Offer
+ * @package Lovata\VkGoodsShopaholic\Classes\Event\Offer
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  */
 class ExtendOfferFieldsHandler extends AbstractBackendFieldHandler
@@ -20,14 +20,14 @@ class ExtendOfferFieldsHandler extends AbstractBackendFieldHandler
      */
     protected function extendFields($obWidget)
     {
-        $sCodeModelForImages = VkontakteSettings::getValue('code_model_for_images', '');
-        if ($sCodeModelForImages != VkontakteSettings::CODE_OFFER) {
+        $sCodeModelForImages = VkGoodsSettings::getValue('code_model_for_images', '');
+        if ($sCodeModelForImages != VkGoodsSettings::CODE_OFFER) {
             return;
         }
 
         $arFields = [
             'section_vkontakte' => [
-                'label' => 'lovata.vkontakteshopaholic::lang.field.section_vkontakte',
+                'label' => 'lovata.vkgoodsshopaholic::lang.field.section_vkontakte',
                 'tab'   => 'lovata.toolbox::lang.tab.images',
                 'type'  => 'section',
                 'span'  => 'full',

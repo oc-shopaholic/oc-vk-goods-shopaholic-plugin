@@ -1,4 +1,4 @@
-<?php namespace Lovata\VKontakteShopaholic\Widgets;
+<?php namespace Lovata\VkGoodsShopaholic\Widgets;
 
 use Flash;
 use Artisan;
@@ -6,7 +6,7 @@ use Backend\Classes\ReportWidgetBase;
 
 /**
  * Class ExportToXML
- * @package Lovata\VKontakteShopaholic\Widgets
+ * @package Lovata\VkGoodsShopaholic\Widgets
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  */
 class ExportToXML extends ReportWidgetBase
@@ -28,6 +28,6 @@ class ExportToXML extends ReportWidgetBase
     {
         Artisan::call('shopaholic:catalog_export.vkontakte');
 
-        Flash::info(trans('lovata.vkontakteshopaholic::lang.message.export_is_completed'));
+        Flash::info(trans('lovata.vkgoodsshopaholic::lang.message.export_is_completed'));
     }
 }

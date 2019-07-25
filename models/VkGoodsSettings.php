@@ -1,4 +1,4 @@
-<?php namespace Lovata\VKontakteShopaholic\Models;
+<?php namespace Lovata\VkGoodsShopaholic\Models;
 
 use Lang;
 use October\Rain\Database\Traits\Validation;
@@ -6,16 +6,16 @@ use October\Rain\Database\Traits\Validation;
 use Lovata\Toolbox\Models\CommonSettings;
 
 /**
- * Class VkontakteSettings
+ * Class VkGoodsSettings
  *
- * @package Lovata\VKontakteShopaholic\Models
+ * @package Lovata\VkGoodsShopaholic\Models
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  *
  * @mixin \October\Rain\Database\Builder
  * @mixin \Eloquent
  * @mixin \System\Behaviors\SettingsModel
  */
-class VkontakteSettings extends CommonSettings
+class VkGoodsSettings extends CommonSettings
 {
     use Validation;
 
@@ -41,8 +41,8 @@ class VkontakteSettings extends CommonSettings
      * @var array
      */
     public $attributeNames = [
-        'community_id'      => 'lovata.tovkontakteshopaholic::lang.field.community_id',
-        'access_token_user' => 'lovata.tovkontakteshopaholic::lang.field.access_token_user',
+        'community_id'      => 'lovata.tovkgoodsshopaholic::lang.field.community_id',
+        'access_token_user' => 'lovata.tovkgoodsshopaholic::lang.field.access_token_user',
     ];
 
     /**
