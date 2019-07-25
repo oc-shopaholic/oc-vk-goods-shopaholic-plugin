@@ -1,6 +1,6 @@
 <?php return [
     'plugin'     => [
-        'name'        => 'Export products to VKontakte',
+        'name'        => 'VK Goods for Shopaholic',
         'description' => 'Export catalog to VKontakte with using API',
     ],
     'menu'       => [
@@ -24,7 +24,7 @@
         'export_catalog_to_api_for_vkontakte' => 'Export catalog to Vkontakte',
     ],
     'permission' => [
-        'vkontaktesettings' => 'Manager settings of catalog export to VKontakte',
+        'vkgoodssettings' => 'Manager settings of catalog export to VKontakte',
     ],
     'message'    => [
         'export_is_completed'           => 'Export is completed',

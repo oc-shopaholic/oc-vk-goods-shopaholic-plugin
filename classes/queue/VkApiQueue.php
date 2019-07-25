@@ -1,12 +1,12 @@
-<?php namespace Lovata\VkontakteShopaholic\Classes\Queue;
+<?php namespace Lovata\VkGoodsShopaholic\Classes\Queue;
 
 use Illuminate\Queue\Jobs\Job;
-use Lovata\VkontakteShopaholic\Classes\Helper\RequestToApi;
+use Lovata\VkGoodsShopaholic\Classes\Helper\RequestToApi;
 
 /**
  * Class VkApiQueue
  *
- * @package Lovata\VkontakteShopaholic\Classes\Queue
+ * @package Lovata\VkGoodsShopaholic\Classes\Queue
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  */
 class VkApiQueue

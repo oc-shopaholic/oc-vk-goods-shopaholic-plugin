@@ -1,4 +1,4 @@
-<?php namespace Lovata\VkontakteShopaholic\Classes\Helper;
+<?php namespace Lovata\VkGoodsShopaholic\Classes\Helper;
 
 use Event;
 use Queue;
@@ -7,13 +7,13 @@ use System\Models\File;
 use Lovata\Shopaholic\Models\Product;
 use Lovata\Shopaholic\Classes\Collection\ProductCollection;
 
-use Lovata\VkontakteShopaholic\Models\VkontakteSettings;
-use Lovata\VkontakteShopaholic\Classes\Queue\VkApiQueue;
+use Lovata\VkGoodsShopaholic\Models\VkGoodsShopaholic;
+use Lovata\VkGoodsShopaholic\Classes\Queue\VkApiQueue;
 
 /**
  * Class ExportCatalogHelper
  *
- * @package Lovata\VkontakteShopaholic\Classes\Helper
+ * @package Lovata\VkGoodsShopaholic\Classes\Helper
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  */
 class ExportCatalogHelper
@@ -47,8 +47,8 @@ class ExportCatalogHelper
             return;
         }
 
-        $bQueueOn = VkontakteSettings::getValue('queue_on', false);
-        $sQueueName = VkontakteSettings::getValue('queue_name', '');
+        $bQueueOn = VkGoodsShopaholic::getValue('queue_on', false);
+        $sQueueName = VkGoodsShopaholic::getValue('queue_name', '');
 
         if ($bQueueOn) {
             $arQueueData = [
@@ -158,12 +158,12 @@ class ExportCatalogHelper
      */
     protected function getProductPreviewImagePath($obOfferItem, $obProductItem)
     {
-        $sCodeModelForImages = VkontakteSettings::getValue('code_model_for_images');
+        $sCodeModelForImages = VkGoodsShopaholic::getValue('code_model_for_images');
         if (empty($sCodeModelForImages)) {
             return null;
         }
 
-        if (VkontakteSettings::CODE_PRODUCT == $sCodeModelForImages) {
+        if (VkGoodsShopaholic::CODE_PRODUCT == $sCodeModelForImages) {
             $obItem = $obProductItem;
         } else {
             $obItem = $obOfferItem;
@@ -187,12 +187,12 @@ class ExportCatalogHelper
     protected function getProductImagesPath($obOfferItem, $obProductItem)
     {
         $arResult = [];
-        $sCodeModelForImages = VkontakteSettings::getValue('code_model_for_images');
+        $sCodeModelForImages = VkGoodsShopaholic::getValue('code_model_for_images');
         if (empty($sCodeModelForImages)) {
             return $arResult;
         }
 
-        if (VkontakteSettings::CODE_PRODUCT == $sCodeModelForImages) {
+        if (VkGoodsShopaholic::CODE_PRODUCT == $sCodeModelForImages) {
             $obItem = $obProductItem;
         } else {
             $obItem = $obOfferItem;

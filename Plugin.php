@@ -1,25 +1,25 @@
-<?php namespace Lovata\VkontakteShopaholic;
+<?php namespace Lovata\VkGoodsShopaholic;
 
 use Event;
 use System\Classes\PluginBase;
 
 // Command
-use Lovata\VKontakteShopaholic\Classes\Console\CatalogExportForVkontakte;
+use Lovata\VkGoodsShopaholic\Classes\Console\CatalogExportForVkontakte;
 
 // Offer event
-use Lovata\VKontakteShopaholic\Classes\Event\Offer\ExtendOfferFieldsHandler;
-use Lovata\VKontakteShopaholic\Classes\Event\Offer\OfferModelHandler;
+use Lovata\VkGoodsShopaholic\Classes\Event\Offer\ExtendOfferFieldsHandler;
+use Lovata\VkGoodsShopaholic\Classes\Event\Offer\OfferModelHandler;
 // Product event
-use Lovata\VKontakteShopaholic\Classes\Event\Product\ExtendProductFieldsHandler;
-use Lovata\VKontakteShopaholic\Classes\Event\Product\ProductModelHandler;
+use Lovata\VkGoodsShopaholic\Classes\Event\Product\ExtendProductFieldsHandler;
+use Lovata\VkGoodsShopaholic\Classes\Event\Product\ProductModelHandler;
 // Category event
-use Lovata\VKontakteShopaholic\Classes\Event\Category\CategoryModelHandler;
-use Lovata\VKontakteShopaholic\Classes\Event\Category\ExtendCategoryFieldsHandler;
+use Lovata\VkGoodsShopaholic\Classes\Event\Category\CategoryModelHandler;
+use Lovata\VkGoodsShopaholic\Classes\Event\Category\ExtendCategoryFieldsHandler;
 
 /**
  * Class Plugin
  *
- * @package Lovata\VkontakteShopaholic
+ * @package Lovata\VkGoodsShopaholic
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  */
 class Plugin extends PluginBase
@@ -32,12 +32,12 @@ class Plugin extends PluginBase
     {
         return [
             'config' => [
-                'label'       => 'lovata.vkontakteshopaholic::lang.menu.settings',
-                'description' => 'lovata.vkontakteshopaholic::lang.menu.settings_description',
+                'label'       => 'lovata.vkgoodsshopaholic::lang.menu.settings',
+                'description' => 'lovata.vkgoodsshopaholic::lang.menu.settings_description',
                 'category'    => 'lovata.shopaholic::lang.tab.settings',
                 'icon'        => 'icon-upload',
-                'class'       => 'Lovata\VKontakteShopaholic\Models\VkontakteSettings',
-                'permissions' => ['shopaholic-menu-vkontakte-export'],
+                'class'       => 'Lovata\VkGoodsShopaholic\Models\VkGoodsShopaholic',
+                'permissions' => ['shopaholic-menu-vkgoodsshopaholic-export'],
                 'order'       => 9000,
             ],
         ];
@@ -73,8 +73,8 @@ class Plugin extends PluginBase
     public function registerReportWidgets()
     {
         return [
-            'Lovata\VKontakteShopaholic\Widgets\ExportToXML' => [
-                'label' => 'lovata.vkontakteshopaholic::lang.widget.export_catalog_to_api_for_vkontakte',
+            'Lovata\VkGoodsShopaholic\Widgets\ExportToXML' => [
+                'label' => 'lovata.vkgoodsshopaholic::lang.widget.export_catalog_to_api_for_vkontakte',
             ],
         ];
     }

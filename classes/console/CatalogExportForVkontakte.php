@@ -1,12 +1,12 @@
-<?php namespace Lovata\VKontakteShopaholic\Classes\Console;
+<?php namespace Lovata\VkGoodsShopaholic\Classes\Console;
 
 use Illuminate\Console\Command;
-use Lovata\VKontakteShopaholic\Classes\Helper\ExportCatalogHelper;
+use Lovata\VkGoodsShopaholic\Classes\Helper\ExportCatalogHelper;
 
 /**
  * Class CatalogExportForVkontakte
  *
- * @package Lovata\VKontakteShopaholic\Classes\Console
+ * @package Lovata\VkGoodsShopaholic\Classes\Console
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  */
 class CatalogExportForVkontakte extends Command

@@ -1,10 +1,10 @@
-<?php namespace Lovata\VkontakteShopaholic\Classes\Helper;
+<?php namespace Lovata\VkGoodsShopaholic\Classes\Helper;
 
 use Lovata\Shopaholic\Models\Product;
 
 /**
  * Class RequestToApi
- * @package Lovata\VkontakteShopaholic\Classes\Helper
+ * @package Lovata\VkGoodsShopaholic\Classes\Helper
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  */
 class RequestToApi

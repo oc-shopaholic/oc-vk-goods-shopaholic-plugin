@@ -1,15 +1,15 @@
-<?php namespace Lovata\VKontakteShopaholic\Classes\Event\Product;
+<?php namespace Lovata\VkGoodsShopaholic\Classes\Event\Product;
 
 use Lovata\Toolbox\Classes\Event\AbstractBackendFieldHandler;
 
 use Lovata\Shopaholic\Models\Product;
 use Lovata\Shopaholic\Controllers\Products;
-use Lovata\VKontakteShopaholic\Models\VkontakteSettings;
+use Lovata\VkGoodsShopaholic\Models\VkGoodsShopaholic;
 
 /**
  * Class ExtendProductFieldsHandler
  *
- * @package Lovata\VKontakteShopaholic\Classes\Event\Product
+ * @package Lovata\VkGoodsShopaholic\Classes\Event\Product
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  */
 class ExtendProductFieldsHandler extends AbstractBackendFieldHandler
@@ -23,17 +23,17 @@ class ExtendProductFieldsHandler extends AbstractBackendFieldHandler
 
         $arFields = [
             'active_vk' => [
-                'label' => 'lovata.vkontakteshopaholic::lang.field.active_vk',
+                'label' => 'lovata.vkgoodsshopaholic::lang.field.active_vk',
                 'type' => 'checkbox',
                 'span' => 'left',
                 'tab' => 'lovata.toolbox::lang.tab.settings',
             ],
         ];
 
-        $sCodeModelForImages = VkontakteSettings::getValue('code_model_for_images', '');
-        if ($sCodeModelForImages == VkontakteSettings::CODE_PRODUCT) {
+        $sCodeModelForImages = VkGoodsShopaholic::getValue('code_model_for_images', '');
+        if ($sCodeModelForImages == VkGoodsShopaholic::CODE_PRODUCT) {
             $arFields['section_vkontakte_02'] = [
-                'label' => 'lovata.vkontakteshopaholic::lang.field.section_vkontakte',
+                'label' => 'lovata.vkgoodsshopaholic::lang.field.section_vkontakte',
                 'tab'   => 'lovata.toolbox::lang.tab.images',
                 'type'  => 'section',
                 'span'  => 'full',

@@ -1,15 +1,15 @@
-<?php namespace Lovata\VKontakteShopaholic\Classes\Event\Category;
+<?php namespace Lovata\VkGoodsShopaholic\Classes\Event\Category;
 
 use Lovata\Toolbox\Classes\Event\AbstractBackendFieldHandler;
 
 use Lovata\Shopaholic\Models\Category;
 use Lovata\Shopaholic\Controllers\Categories;
-use Lovata\VkontakteShopaholic\Classes\Helper\VkApi;
+use Lovata\VkGoodsShopaholic\Classes\Helper\VkApi;
 
 /**
  * Class ExtendCategoryFieldsHandler
  *
- * @package Lovata\VKontakteShopaholic\Classes\Event\Category
+ * @package Lovata\VkGoodsShopaholic\Classes\Event\Category
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  */
 class ExtendCategoryFieldsHandler extends AbstractBackendFieldHandler
@@ -22,7 +22,7 @@ class ExtendCategoryFieldsHandler extends AbstractBackendFieldHandler
     {
         $obWidget->addTabFields([
             'category_vk_id' => [
-                'label'       => 'lovata.vkontakteshopaholic::lang.field.category_vk_id',
+                'label'       => 'lovata.vkgoodsshopaholic::lang.field.category_vk_id',
                 'type'        => 'dropdown',
                 'span'        => 'left',
                 'required'    => '0',

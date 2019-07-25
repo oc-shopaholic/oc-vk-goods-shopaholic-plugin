@@ -1,13 +1,13 @@
-<?php namespace Lovata\VkontakteShopaholic\Classes\Helper;
+<?php namespace Lovata\VkGoodsShopaholic\Classes\Helper;
 
-use Lovata\VKontakteShopaholic\Models\VkontakteSettings;
+use Lovata\VkGoodsShopaholic\Models\VkGoodsShopaholic;
 use GuzzleHttp\Client;
 use System\Models\File;
 
 /**
  * Class VkApi
  *
- * @package Lovata\VkontakteShopaholic\Classes\Helper
+ * @package Lovata\VkGoodsShopaholic\Classes\Helper
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  */
 class VkApi
@@ -203,8 +203,8 @@ class VkApi
      */
     protected function initData()
     {
-        $this->sAccessTokenUser = VkontakteSettings::getValue('access_token_user', '');
-        $this->iCommunityId     = VkontakteSettings::getValue('community_id');
+        $this->sAccessTokenUser = VkGoodsShopaholic::getValue('access_token_user', '');
+        $this->iCommunityId     = VkGoodsShopaholic::getValue('community_id');
 
         if (!empty($this->iCommunityId)) {
             $this->sOwnerId = '-'.$this->iCommunityId;
