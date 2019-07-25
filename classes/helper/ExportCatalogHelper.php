@@ -7,7 +7,7 @@ use System\Models\File;
 use Lovata\Shopaholic\Models\Product;
 use Lovata\Shopaholic\Classes\Collection\ProductCollection;
 
-use Lovata\VkGoodsShopaholic\Models\VkGoodsShopaholic;
+use Lovata\VkGoodsShopaholic\Models\VkGoodsSettings;
 use Lovata\VkGoodsShopaholic\Classes\Queue\VkApiQueue;
 
 /**
@@ -47,8 +47,8 @@ class ExportCatalogHelper
             return;
         }
 
-        $bQueueOn = VkGoodsShopaholic::getValue('queue_on', false);
-        $sQueueName = VkGoodsShopaholic::getValue('queue_name', '');
+        $bQueueOn = VkGoodsSettings::getValue('queue_on', false);
+        $sQueueName = VkGoodsSettings::getValue('queue_name', '');
 
         if ($bQueueOn) {
             $arQueueData = [
@@ -158,12 +158,12 @@ class ExportCatalogHelper
      */
     protected function getProductPreviewImagePath($obOfferItem, $obProductItem)
     {
-        $sCodeModelForImages = VkGoodsShopaholic::getValue('code_model_for_images');
+        $sCodeModelForImages = VkGoodsSettings::getValue('code_model_for_images');
         if (empty($sCodeModelForImages)) {
             return null;
         }
 
-        if (VkGoodsShopaholic::CODE_PRODUCT == $sCodeModelForImages) {
+        if (VkGoodsSettings::CODE_PRODUCT == $sCodeModelForImages) {
             $obItem = $obProductItem;
         } else {
             $obItem = $obOfferItem;
@@ -187,12 +187,12 @@ class ExportCatalogHelper
     protected function getProductImagesPath($obOfferItem, $obProductItem)
     {
         $arResult = [];
-        $sCodeModelForImages = VkGoodsShopaholic::getValue('code_model_for_images');
+        $sCodeModelForImages = VkGoodsSettings::getValue('code_model_for_images');
         if (empty($sCodeModelForImages)) {
             return $arResult;
         }
 
-        if (VkGoodsShopaholic::CODE_PRODUCT == $sCodeModelForImages) {
+        if (VkGoodsSettings::CODE_PRODUCT == $sCodeModelForImages) {
             $obItem = $obProductItem;
         } else {
             $obItem = $obOfferItem;

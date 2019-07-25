@@ -36,7 +36,7 @@ class Plugin extends PluginBase
                 'description' => 'lovata.vkgoodsshopaholic::lang.menu.settings_description',
                 'category'    => 'lovata.shopaholic::lang.tab.settings',
                 'icon'        => 'icon-upload',
-                'class'       => 'Lovata\VkGoodsShopaholic\Models\VkGoodsShopaholic',
+                'class'       => 'Lovata\VkGoodsShopaholic\Models\VkGoodsSettings',
                 'permissions' => ['shopaholic-menu-vkgoodsshopaholic-export'],
                 'order'       => 9000,
             ],

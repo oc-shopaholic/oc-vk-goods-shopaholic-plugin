@@ -6,7 +6,7 @@ use October\Rain\Database\Traits\Validation;
 use Lovata\Toolbox\Models\CommonSettings;
 
 /**
- * Class VkGoodsShopaholic
+ * Class VkGoodsSettings
  *
  * @package Lovata\VkGoodsShopaholic\Models
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
@@ -15,7 +15,7 @@ use Lovata\Toolbox\Models\CommonSettings;
  * @mixin \Eloquent
  * @mixin \System\Behaviors\SettingsModel
  */
-class VkGoodsShopaholic extends CommonSettings
+class VkGoodsSettings extends CommonSettings
 {
     use Validation;
 

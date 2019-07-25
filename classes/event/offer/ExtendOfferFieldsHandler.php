@@ -4,7 +4,7 @@ use Lovata\Toolbox\Classes\Event\AbstractBackendFieldHandler;
 
 use Lovata\Shopaholic\Models\Offer;
 use Lovata\Shopaholic\Controllers\Offers;
-use Lovata\VkGoodsShopaholic\Models\VkGoodsShopaholic;
+use Lovata\VkGoodsShopaholic\Models\VkGoodsSettings;
 
 /**
  * Class ExtendOfferFieldsHandler
@@ -20,8 +20,8 @@ class ExtendOfferFieldsHandler extends AbstractBackendFieldHandler
      */
     protected function extendFields($obWidget)
     {
-        $sCodeModelForImages = VkGoodsShopaholic::getValue('code_model_for_images', '');
-        if ($sCodeModelForImages != VkGoodsShopaholic::CODE_OFFER) {
+        $sCodeModelForImages = VkGoodsSettings::getValue('code_model_for_images', '');
+        if ($sCodeModelForImages != VkGoodsSettings::CODE_OFFER) {
             return;
         }
 

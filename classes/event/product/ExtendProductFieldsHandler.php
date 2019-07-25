@@ -4,7 +4,7 @@ use Lovata\Toolbox\Classes\Event\AbstractBackendFieldHandler;
 
 use Lovata\Shopaholic\Models\Product;
 use Lovata\Shopaholic\Controllers\Products;
-use Lovata\VkGoodsShopaholic\Models\VkGoodsShopaholic;
+use Lovata\VkGoodsShopaholic\Models\VkGoodsSettings;
 
 /**
  * Class ExtendProductFieldsHandler
@@ -30,8 +30,8 @@ class ExtendProductFieldsHandler extends AbstractBackendFieldHandler
             ],
         ];
 
-        $sCodeModelForImages = VkGoodsShopaholic::getValue('code_model_for_images', '');
-        if ($sCodeModelForImages == VkGoodsShopaholic::CODE_PRODUCT) {
+        $sCodeModelForImages = VkGoodsSettings::getValue('code_model_for_images', '');
+        if ($sCodeModelForImages == VkGoodsSettings::CODE_PRODUCT) {
             $arFields['section_vkontakte_02'] = [
                 'label' => 'lovata.vkgoodsshopaholic::lang.field.section_vkontakte',
                 'tab'   => 'lovata.toolbox::lang.tab.images',

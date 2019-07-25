@@ -1,8 +1,7 @@
 <?php namespace Lovata\VkGoodsShopaholic\Classes\Helper;
 
-use Lovata\VkGoodsShopaholic\Models\VkGoodsShopaholic;
+use Lovata\VkGoodsShopaholic\Models\VkGoodsSettings;
 use GuzzleHttp\Client;
-use System\Models\File;
 
 /**
  * Class VkApi
@@ -203,8 +202,8 @@ class VkApi
      */
     protected function initData()
     {
-        $this->sAccessTokenUser = VkGoodsShopaholic::getValue('access_token_user', '');
-        $this->iCommunityId     = VkGoodsShopaholic::getValue('community_id');
+        $this->sAccessTokenUser = VkGoodsSettings::getValue('access_token_user', '');
+        $this->iCommunityId     = VkGoodsSettings::getValue('community_id');
 
         if (!empty($this->iCommunityId)) {
             $this->sOwnerId = '-'.$this->iCommunityId;
