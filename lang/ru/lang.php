@@ -4,7 +4,8 @@
         'description' => 'Интеграция с API VKontakte для выгрузки каталога',
     ],
     'menu'       => [
-        'vkgoodssettings' => 'Экспорта во VKontakte',
+        'settings'             => 'Export to VKontakte',
+        'settings_description' => 'Configure export catalog to VKontakte',
     ],
     'field'      => [
         'community_id'                               => 'Идентификатор сообщества',
@@ -26,7 +27,7 @@
         'vkgoodssettings' => 'Управление настройками экспорта во VKontakte',
     ],
     'message'    => [
-        'export_is_complete'            => 'Экспорт запущен',
+        'export_is_completed'           => 'Export is completed',
         'update_catalog_to_xml_confirm' => 'Запустить обновление каталога?',
     ],
 ];
