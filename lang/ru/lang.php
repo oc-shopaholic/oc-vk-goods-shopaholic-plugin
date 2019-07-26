@@ -26,7 +26,7 @@
         'vkgoodssettings' => 'Управление настройками экспорта во VK Goods',
     ],
     'message'    => [
-        'export_is_complete'            => 'Экспорт запущен',
+        'export_is_completed'           => 'Экспорт запущен',
         'update_catalog_to_xml_confirm' => 'Запустить обновление каталога?',
     ],
 ];

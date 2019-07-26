@@ -28,6 +28,6 @@ class ExportToXML extends ReportWidgetBase
     {
         Artisan::call('shopaholic:catalog_export.vk_goods');
 
-        Flash::info(trans('lovata.vkgoodsshopaholic::lang.message.vk_goods'));
+        Flash::info(trans('lovata.vkgoodsshopaholic::lang.message.export_is_completed'));
     }
 }
