@@ -17,13 +17,13 @@ class OfferModelHandler
     {
         Offer::extend(function ($obOffer) {
             /** @var Offer $obOffer */
-            $obOffer->fillable[] = 'preview_image_vkontakte';
-            $obOffer->fillable[] = 'images_vkontakte';
+            $obOffer->fillable[] = 'preview_image_vk_goods';
+            $obOffer->fillable[] = 'images_vk_goods';
 
-            $obOffer->attachOne['preview_image_vkontakte'] = 'System\Models\File';
-            $obOffer->attachMany['images_vkontakte']       = 'System\Models\File';
+            $obOffer->attachOne['preview_image_vk_goods'] = 'System\Models\File';
+            $obOffer->attachMany['images_vk_goods']       = 'System\Models\File';
 
-            $obOffer->addCachedField(['preview_image_vkontakte', 'images_vkontakte']);
+            $obOffer->addCachedField(['preview_image_vk_goods', 'images_vk_goods']);
         });
     }
 }
