@@ -1,6 +1,25 @@
-> Use **WELCOME** coupon to get an one-time 50% discount!
+# VK Goods for Shopaholic
+
+[![Build Status](https://travis-ci.org/oc-shopaholic/oc-vk-goods-shopaholic-plugin.svg?branch=master)](https://travis-ci.org/oc-shopaholic/oc-vk-goods-shopaholic-plugin) [![GitHub release](https://img.shields.io/github/release/oc-shopaholic/oc-yandex-market-shopaholic-plugin)](https://github.com/oc-shopaholic/oc-yandex-market-shopaholic-plugin/releases) [![Coverage Status](https://coveralls.io/repos/github/oc-shopaholic/oc-vk-goods-shopaholic-plugin/badge.svg?branch=master)](https://coveralls.io/github/oc-shopaholic/oc-vk-goods-shopaholic-plugin?branch=master) [![Maintainability](https://api.codeclimate.com/v1/badges/9b49b9523b9976ad161f/maintainability)](https://codeclimate.com/github/oc-shopaholic/oc-vk-goods-shopaholic-plugin/maintainability) [![Crowdin](https://d322cqt584bo4o.cloudfront.net/oc-vk-goods-for-shopaholic-plugin/localized.svg)](https://crowdin.com/project/oc-vk-goods-shopaholic-plugin) [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+Free extension for [Shopaholic](https://github.com/oc-shopaholic/oc-shopaholic-plugin) #1 e-commerce ecosystem for [October CMS](https://octobercms.com).
+
+![Shopaholic Banner](assets/images/vk-goods-for-shopaholic-plugin-banner.png)
+
+Extend your sales to the audience of the most popular Russian social media [vk.com](https://vk.com) using **VK Goods for Shopaholic** plugin.
+
+## Overview
+
+This plugin allows to:
+* **sync products** with your business or community page **using [VK API](https://vk.com/dev/market)**;
+* control **synchronization** process using **GUI** or **CLI**;
+* **optimize** synchronization process **using queues**.
 
 ## Installation
+
+You can install this plugin using October CMS backend Dashboard or by adding them to the registered project in your October CMS Marketplace profile.
+
+You can find CLI way below to install the plugin.
 
 ### Artisan
 
@@ -14,18 +33,14 @@ php artisan plugin:install Lovata.VkGoodsShopaholic
 
 Will be added soon.
 
-<!-- ## Documentation
-
-The complete official documentation of the plugin can be found [here](https://github.com/lovata/oc-shopaholic-plugin/wiki). -->
-
 ## Configuration
 
-Go to `Settings` > `Export to VKontakte` to configure the plugin.
+Go to `Settings` > `Export to VK Goods` to configure the plugin.
 
 You can export catalog this ways:
   
-1. using widget `Export catalog to VKontakte` on the October CMS dashboard
-2. by runnung `shopaholic:catalog_export.vkontakte` artisan command
+1. using widget `Export catalog to VK Goods` on the October CMS dashboard;
+2. by runnung `shopaholic:catalog_export.vkgoods` artisan command.
 
 ## Live demo
 
@@ -54,8 +69,8 @@ All this guarantees the stable work of our plugins after they are updated with n
 
 If you're interested in the improvement of Shopaholic project you can help in the following ways:
 * bug reporting and new feature requesting by creating issues on plugin [GitHub page](https://github.com/lovata/oc-shopaholic-plugin/issues);
-* contribution to a project following these [instructions](https://github.com/lovata/oc-shopaholic-plugin/blob/master/CONTRIBUTING.md);
-* localization to your language using [Crowdin](https://crowdin.com/project/shopaholic-plugin-for-october) service.
+* contribution to a project following these [instructions](https://github.com/oc-shopaholic/oc-vk-goods-shopaholic-plugin/master/CONTRIBUTING.md);
+* localization to your language using [Crowdin](https://crowdin.com/project/oc-vk-goods-for-shopaholic-plugin) service.
 
 Let us know if you have any other questions, ideas or suggestions! Just drop a line at [info@shopaholic.one](mailto:info@shopaholic.one).
 
@@ -63,4 +78,5 @@ Let us know if you have any other questions, ideas or suggestions! Just drop a l
 
 © 2019, [LOVATA Group, LLC](https://github.com/lovata) under [GNU GPL v3](https://opensource.org/licenses/GPL-3.0).
 
-Developed by [Sergey Zakharevich](https://github.com/wobqqq) and [Andrey Kharanenka](https://github.com/kharanenka).
+Originally developed by [Sergey Zakharevich](https://github.com/wobqqq) and [Andrey Kharanenka](https://github.com/kharanenka).
+
