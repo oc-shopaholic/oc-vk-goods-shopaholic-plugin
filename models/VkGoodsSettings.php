@@ -19,7 +19,7 @@ class VkGoodsSettings extends CommonSettings
 {
     use Validation;
 
-    const SETTINGS_CODE = 'lovata_shopaholic_vkontakte_export_settings';
+    const SETTINGS_CODE = 'lovata_shopaholic_vk_goods_export_settings';
 
     const CODE_OFFER = 'offer';
     const CODE_PRODUCT = 'product';
@@ -27,7 +27,7 @@ class VkGoodsSettings extends CommonSettings
     /**
      * @var string
      */
-    public $settingsCode = 'lovata_shopaholic_vkontakte_export_settings';
+    public $settingsCode = 'lovata_shopaholic_vk_goods_export_settings';
 
     /**
      * @var array

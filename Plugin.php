@@ -4,7 +4,7 @@ use Event;
 use System\Classes\PluginBase;
 
 // Command
-use Lovata\VkGoodsShopaholic\Classes\Console\CatalogExportForVkontakte;
+use Lovata\VkGoodsShopaholic\Classes\Console\CatalogExportForVKGoods;
 
 // Offer event
 use Lovata\VkGoodsShopaholic\Classes\Event\Offer\ExtendOfferFieldsHandler;
@@ -64,7 +64,7 @@ class Plugin extends PluginBase
      */
     public function register()
     {
-        $this->registerConsoleCommand('shopaholic:catalog_export.vkontakte', CatalogExportForVkontakte::class);
+        $this->registerConsoleCommand('shopaholic:catalog_export.vk_goods', CatalogExportForVKGoods::class);
     }
 
     /**
@@ -74,7 +74,7 @@ class Plugin extends PluginBase
     {
         return [
             'Lovata\VkGoodsShopaholic\Widgets\ExportToXML' => [
-                'label' => 'lovata.vkgoodsshopaholic::lang.widget.export_catalog_to_api_for_vkontakte',
+                'label' => 'lovata.vkgoodsshopaholic::lang.widget.export_catalog_to_api_for_vk_goods',
             ],
         ];
     }

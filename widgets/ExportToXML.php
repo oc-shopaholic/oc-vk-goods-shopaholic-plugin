@@ -22,12 +22,12 @@ class ExportToXML extends ReportWidgetBase
     }
 
     /**
-     * Generate xml for vkontakte
+     * Generate xml for vk goods
      */
-    public function onGenerateXMLForVkontakte()
+    public function onGenerateXMLForVKGoods()
     {
-        Artisan::call('shopaholic:catalog_export.vkontakte');
+        Artisan::call('shopaholic:catalog_export.vk_goods');
 
-        Flash::info(trans('lovata.vkgoodsshopaholic::lang.message.export_is_completed'));
+        Flash::info(trans('lovata.vkgoodsshopaholic::lang.message.vk_goods'));
     }
 }
