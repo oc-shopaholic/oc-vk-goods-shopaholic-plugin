@@ -18,7 +18,7 @@ use Lovata\VkGoodsShopaholic\Classes\Queue\VkApiQueue;
  */
 class ExportCatalogHelper
 {
-    const EVENT_VKONTAKTE_PRODUCT_DATA = 'shopaholic.vkontakte.market.offer.data';
+    const EVENT_VKGOODS_PRODUCT_DATA = 'shopaholic.vkgoods.market.offer.data';
 
     /**
      * @var array
@@ -134,7 +134,7 @@ class ExportCatalogHelper
             'deleted'       => $obOfferItem->quantity == 0,
         ];
 
-        $arEventData = Event::fire(self::EVENT_VKONTAKTE_PRODUCT_DATA, [$arProductData]);
+        $arEventData = Event::fire(self::EVENT_VKGOODS_PRODUCT_DATA, [$arProductData]);
         if (!empty($arEventData)) {
             foreach ($arEventData as $arEventProductData) {
                 if (empty($arEventProductData) || !is_array($arEventProductData)) {
@@ -169,11 +169,11 @@ class ExportCatalogHelper
             $obItem = $obOfferItem;
         }
 
-        if (empty($obItem->preview_image_vkontakte)) {
+        if (empty($obItem->preview_image_vk_goods)) {
             return null;
         }
 
-        return $obItem->preview_image_vkontakte->getLocalPath();
+        return $obItem->preview_image_vk_goods->getLocalPath();
     }
 
     /**
@@ -198,12 +198,12 @@ class ExportCatalogHelper
             $obItem = $obOfferItem;
         }
 
-        if (empty($obItem->images_vkontakte)) {
+        if (empty($obItem->images_vk_goods)) {
             return $arResult;
         }
 
         /** @var File $obImage */
-        foreach ($obItem->images_vkontakte as $obImage) {
+        foreach ($obItem->images_vk_goods as $obImage) {
             $arResult[] = $obImage->getLocalPath();
         }
 

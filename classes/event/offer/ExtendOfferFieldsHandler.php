@@ -26,13 +26,13 @@ class ExtendOfferFieldsHandler extends AbstractBackendFieldHandler
         }
 
         $arFields = [
-            'section_vkontakte' => [
-                'label' => 'lovata.vkgoodsshopaholic::lang.field.section_vkontakte',
+            'section_vk_goods' => [
+                'label' => 'lovata.vkgoodsshopaholic::lang.field.section_vk_goods',
                 'tab'   => 'lovata.toolbox::lang.tab.images',
                 'type'  => 'section',
                 'span'  => 'full',
             ],
-            'preview_image_vkontakte' => [
+            'preview_image_vk_goods' => [
                 'label'     => 'lovata.toolbox::lang.field.preview_image',
                 'tab'       => 'lovata.toolbox::lang.tab.images',
                 'type'      => 'fileupload',
@@ -41,7 +41,7 @@ class ExtendOfferFieldsHandler extends AbstractBackendFieldHandler
                 'mode'      => 'image',
                 'fileTypes' => 'jpeg,png',
             ],
-            'images_vkontakte' => [
+            'images_vk_goods' => [
                 'label'     => 'lovata.toolbox::lang.field.images',
                 'type'      => 'fileupload',
                 'span'      => 'left',

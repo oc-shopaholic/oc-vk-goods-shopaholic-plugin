@@ -4,22 +4,22 @@ use Illuminate\Console\Command;
 use Lovata\VkGoodsShopaholic\Classes\Helper\ExportCatalogHelper;
 
 /**
- * Class CatalogExportForVkontakte
+ * Class CatalogExportForVKGoods
  *
  * @package Lovata\VkGoodsShopaholic\Classes\Console
  * @author  Sergey Zakharevich, s.zakharevich@lovata.com, LOVATA Group
  */
-class CatalogExportForVkontakte extends Command
+class CatalogExportForVKGoods extends Command
 {
     /**
      * @var string command name.
      */
-    protected $name = 'shopaholic:catalog_export.vkontakte';
+    protected $name = 'shopaholic:catalog_export.vk_goods';
 
     /**
      * @var string The console command description.
      */
-    protected $description = 'Run catalog export to Vkontakte';
+    protected $description = 'Run catalog export to VK Goods';
 
     /**
      * Execute the console command.

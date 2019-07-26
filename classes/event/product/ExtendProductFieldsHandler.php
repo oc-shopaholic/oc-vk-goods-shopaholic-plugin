@@ -33,12 +33,12 @@ class ExtendProductFieldsHandler extends AbstractBackendFieldHandler
         $sCodeModelForImages = VkGoodsSettings::getValue('code_model_for_images', '');
         if ($sCodeModelForImages == VkGoodsSettings::CODE_PRODUCT) {
             $arFields['section_vkontakte_02'] = [
-                'label' => 'lovata.vkgoodsshopaholic::lang.field.section_vkontakte',
+                'label' => 'lovata.vkgoodsshopaholic::lang.field.section_vk_goods',
                 'tab'   => 'lovata.toolbox::lang.tab.images',
                 'type'  => 'section',
                 'span'  => 'full',
             ];
-            $arFields['preview_image_vkontakte'] = [
+            $arFields['preview_image_vk_goods'] = [
                 'label'     => 'lovata.toolbox::lang.field.preview_image',
                 'tab'       => 'lovata.toolbox::lang.tab.images',
                 'type'      => 'fileupload',
@@ -47,7 +47,7 @@ class ExtendProductFieldsHandler extends AbstractBackendFieldHandler
                 'mode'      => 'image',
                 'fileTypes' => 'jpeg,png',
             ];
-            $arFields['images_vkontakte'] = [
+            $arFields['images_vk_goods'] = [
                 'label'     => 'lovata.toolbox::lang.field.images',
                 'type'      => 'fileupload',
                 'span'      => 'left',
