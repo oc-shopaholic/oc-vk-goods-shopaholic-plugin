@@ -1,0 +1,14 @@
+<div id="cachesizes" class="report-widget">
+    <h3>
+        <?= e(trans('lovata.vkgoodsshopaholic::lang.widget.export_catalog_to_api_for_vk_goods')) ?>
+    </h3>
+    <button
+            type="submit"
+            data-request="onGenerateXMLForVKGoods"
+            class="btn btn-primary icon-upload"
+            data-stripe-load-indicator
+            data-request-confirm="<?= e(trans('lovata.vkgoodsshopaholic::lang.message.update_catalog_to_xml_confirm')) ?>"
+    >
+        <?= e(trans('lovata.vkgoodsshopaholic::lang.button.export_catalog_to_api')) ?>
+    </button>
+</div>

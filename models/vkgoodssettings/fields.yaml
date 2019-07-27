@@ -1,0 +1,56 @@
+fields:
+tabs:
+    icons:
+        lovata.toolbox::lang.tab.settings: icon-cogs
+        lovata.shopaholic::lang.tab.offer: icon-briefcase
+    fields:
+        community_id:
+            label: 'lovata.vkgoodsshopaholic::lang.field.community_id'
+            type: number
+            span: left
+            required: 1
+            tab: 'lovata.toolbox::lang.tab.settings'
+            placeholder: 'lovata.vkgoodsshopaholic::lang.field.community_id'
+        access_token_user:
+            label: 'lovata.vkgoodsshopaholic::lang.field.access_token_user'
+            type: text
+            span: left
+            required: 1
+            tab: 'lovata.toolbox::lang.tab.settings'
+            placeholder: 'lovata.vkgoodsshopaholic::lang.field.access_token_user'
+        queue_on:
+            label: 'lovata.toolbox::lang.field.queue_on'
+            type: checkbox
+            span: left
+            required: 0
+            tab: 'lovata.toolbox::lang.tab.settings'
+        queue_name:
+            label: 'lovata.vkgoodsshopaholic::lang.field.queue_name'
+            type: text
+            span: left
+            required: 0
+            tab: 'lovata.toolbox::lang.tab.settings'
+            placeholder: 'lovata.vkgoodsshopaholic::lang.field.queue_name'
+            trigger:
+                action: show
+                field: queue_on
+                condition: checked
+        section_management_additional_fields_offer:
+            label: 'lovata.vkgoodsshopaholic::lang.field.section_management_additional_fields_offer'
+            type: section
+            span: left
+            tab: 'lovata.shopaholic::lang.tab.offer'
+        code_model_for_images:
+            label: 'lovata.vkgoodsshopaholic::lang.field.code_model_for_images'
+            type: dropdown
+            emptyOption: 'lovata.toolbox::lang.field.empty'
+            span: left
+            options: getGetImagesFromOptions
+            tab: 'lovata.shopaholic::lang.tab.offer'
+        field_images:
+            label: 'lovata.toolbox::lang.field.images'
+            type: checkbox
+            span: left
+            required: 0
+            tab: 'lovata.shopaholic::lang.tab.offer'
+            default: false
