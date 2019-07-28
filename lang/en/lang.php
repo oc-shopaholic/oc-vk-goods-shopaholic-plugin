@@ -28,6 +28,6 @@
     ],
     'message'    => [
         'export_is_completed'           => 'Export has completed successfully!',
-        'update_catalog_to_xml_confirm' => 'All products will be exported to your VK Shop. Continue?',
+        'update_catalog_to_xml_confirm' => 'All products will be exported to your VK shop. Continue?',
     ],
 ];
