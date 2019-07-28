@@ -56,6 +56,9 @@ php:
 
 jobs:
   include:
+    - stage: Empty build
+      script:
+        - echo 'No unit tests at the moment. Sorry!'
     - stage: Release
       if: tag IS present
       env:
