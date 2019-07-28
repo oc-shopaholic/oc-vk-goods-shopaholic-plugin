@@ -57,6 +57,7 @@ php:
 jobs:
   include:
     - stage: Release
+      if: tag IS present
       env:
         - BUILD=true
       script:
