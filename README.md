@@ -4,7 +4,7 @@
 
 Free extension for [Shopaholic](https://github.com/oc-shopaholic/oc-shopaholic-plugin) #1 e-commerce ecosystem for [October CMS](https://octobercms.com).
 
-![Shopaholic Banner](assets/images/banner-837×348.png)
+![Shopaholic Banner](assets/identity/banner-837×348.png)
 
 Extend your sales to the audience of the most popular Russian social media [vk.com](https://vk.com) using **VK Goods for Shopaholic** plugin.
 
