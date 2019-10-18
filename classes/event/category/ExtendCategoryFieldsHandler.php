@@ -27,8 +27,7 @@ class ExtendCategoryFieldsHandler extends AbstractBackendFieldHandler
                 'span'        => 'left',
                 'required'    => '0',
                 'showSearch'  => 'true',
-                'emptyOption' => 'lovata.toolbox::lang.field.empty',
-                'options'     => $this->getVkCategoryIdListOptions(),
+                'options'     => array_merge([0 => 'lovata.toolbox::lang.field.empty'], $this->getVkCategoryIdListOptions()),
                 'tab'         => 'lovata.toolbox::lang.tab.settings',
             ],
         ]);

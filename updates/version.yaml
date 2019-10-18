@@ -2,3 +2,5 @@
     - 'Init plugin'
     - update_table_products_add_vk_fields.php
     - update_table_categories_add_vk_fields.php
+1.0.1:
+    - 'Added require array to Plugin file'
