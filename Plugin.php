@@ -28,11 +28,6 @@ class Plugin extends PluginBase
     public $require = ['Lovata.Shopaholic', 'Lovata.Toolbox'];
 
     /**
-     * @var array
-     */
-    public $require = ['Lovata.Shopaholic', 'Lovata.Toolbox'];
-
-    /**
      * Register settings
      * @return array
      */
