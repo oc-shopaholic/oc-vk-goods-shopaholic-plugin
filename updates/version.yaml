@@ -4,3 +4,5 @@
     - update_table_categories_add_vk_fields.php
 1.0.1:
     - 'Added require array to Plugin file'
+1.0.2:
+    - 'Fixed error in ProductModelHandler class with name of image field'
