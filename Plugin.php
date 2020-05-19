@@ -25,7 +25,7 @@ use Lovata\VkGoodsShopaholic\Classes\Event\Category\ExtendCategoryFieldsHandler;
 class Plugin extends PluginBase
 {
     /** @var array Plugin dependencies */
-    public $require = ['Lovata.Shopaholic', 'Lovata.Toolbox'];
+    public $require = ['Lovata.Shopaholic', 'Lovata.Toolbox', 'October.Drivers'];
 
     /**
      * Register settings
