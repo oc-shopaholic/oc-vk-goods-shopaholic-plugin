@@ -18,12 +18,12 @@ class ProductModelHandler
         Product::extend(function ($obProduct) {
             /** @var Product $obProduct */
             $obProduct->fillable[] = 'preview_image_vk_goods';
-            $obProduct->fillable[] = 'images_vkontakte';
+            $obProduct->fillable[] = 'images_vk_goods';
             $obProduct->fillable[] = 'active_vk';
             $obProduct->fillable[] = 'external_vk_id';
 
             $obProduct->attachOne['preview_image_vk_goods'] = 'System\Models\File';
-            $obProduct->attachMany['images_vkontakte'] = 'System\Models\File';
+            $obProduct->attachMany['images_vk_goods'] = 'System\Models\File';
 
             $obProduct->addDynamicMethod('scopeActiveVK', function ($obQuery) {
                 return $obQuery->where('active_vk', true);
@@ -37,7 +37,7 @@ class ProductModelHandler
                 return $obQuery->whereNotNull('external_vk_id');
             });
 
-            $obProduct->addCachedField(['preview_image_vk_goods', 'images_vkontakte', 'active_vk', 'external_vk_id']);
+            $obProduct->addCachedField(['preview_image_vk_goods', 'images_vk_goods', 'active_vk', 'external_vk_id']);
         });
     }
 }
