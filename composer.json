@@ -1,0 +1,8 @@
+{
+    "name": "lovata/vkgoodsshopaholic-plugin",
+    "type": "october-plugin",
+    "description": "Allows to export products to VK Goods (vk.com)",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
