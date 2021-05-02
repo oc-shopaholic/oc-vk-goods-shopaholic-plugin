@@ -1,5 +1,6 @@
 <?php namespace Lovata\VkGoodsShopaholic\Classes\Event\Product;
 
+use Lovata\Shopaholic\Classes\Item\ProductItem;
 use Lovata\Shopaholic\Models\Product;
 
 /**
@@ -39,5 +40,10 @@ class ProductModelHandler
 
             $obProduct->addCachedField(['preview_image_vk_goods', 'images_vk_goods', 'active_vk', 'external_vk_id']);
         });
+
+        ProductItem::$arQueryWith[] = 'preview_image_vk_goods';
+        ProductItem::$arQueryWith[] = 'images_vk_goods';
+        ProductItem::$arQueryWith[] = 'offer.preview_image_vk_goods';
+        ProductItem::$arQueryWith[] = 'offer.images_vk_goods';
     }
 }

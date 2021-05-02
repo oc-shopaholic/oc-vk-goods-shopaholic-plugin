@@ -8,3 +8,5 @@
     - 'Fixed error in ProductModelHandler class with name of image field'
 1.1.0:
     - 'Added composer.json to plugin'
+1.2.0:
+    - 'Reduced count of database queries, if cache is empty. Requires Toolbox plugin version 1.32.0 and later.'

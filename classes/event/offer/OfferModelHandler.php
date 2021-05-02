@@ -1,5 +1,6 @@
 <?php namespace Lovata\VkGoodsShopaholic\Classes\Event\Offer;
 
+use Lovata\Shopaholic\Classes\Item\OfferItem;
 use Lovata\Shopaholic\Models\Offer;
 
 /**
@@ -25,5 +26,8 @@ class OfferModelHandler
 
             $obOffer->addCachedField(['preview_image_vk_goods', 'images_vk_goods']);
         });
+
+        OfferItem::$arQueryWith[] = 'preview_image_vk_goods';
+        OfferItem::$arQueryWith[] = 'images_vk_goods';
     }
 }
