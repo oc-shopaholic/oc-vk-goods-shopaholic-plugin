@@ -1,33 +1,33 @@
 <?php return [
     'plugin'     => [
-        'name'        => 'VK Goods for Shopaholic',
-        'description' => 'Export catalog to VKontakte with using API',
+        'name'        => '',
+        'description' => 'Дазваляе экспартаваць тавары ў VK Goods (vk.com)',
     ],
     'menu'       => [
-        'settings'             => 'Export to VKontakte',
-        'settings_description' => 'Configure export catalog to VKontakte',
+        'settings'             => 'Налады VK Goods',
+        'settings_description' => 'Налада экспарту тавараў і кіравання чаргой',
     ],
     'field'      => [
-        'community_id'                               => 'Community id',
-        'code_model_for_images'                      => 'Get images from:',
-        'section_management_additional_fields_offer' => 'Additional fields',
-        'section_vkontakte'                          => 'VKontakte',
-        'active_vk'                                  => 'Export to VKontakte',
-        'access_token_user'                          => 'User access key',
-        'category_vk_id'                             => 'Category VKontakte',
-        'queue_name'                                 => 'Queue name',
+        'community_id'                               => 'ID суполкi',
+        'code_model_for_images'                      => 'Атрымліваць відарысы з',
+        'section_management_additional_fields_offer' => 'Дадатковыя палі',
+        'section_vk_goods'                           => '',
+        'active_vk'                                  => 'Экспартаваць у VK Goods',
+        'access_token_user'                          => 'Ключ доступу да API',
+        'category_vk_id'                             => 'Катэгорыя VK Goods',
+        'queue_name'                                 => 'Назва чаргi',
     ],
     'button'     => [
-        'export_catalog_to_api' => 'Run export',
+        'export_catalog_to_api' => 'Запусціць экспарт',
     ],
     'widget'     => [
-        'export_catalog_to_api_for_vkontakte' => 'Export catalog to Vkontakte',
+        'export_catalog_to_api_for_vk_goods' => 'Экспарт тавараў у VK Goods',
     ],
     'permission' => [
-        'vkgoodssettings' => 'Manager settings of catalog export to VKontakte',
+        'vkgoodssettings' => 'Кіраванне наладамі VK Goods',
     ],
     'message'    => [
-        'export_is_completed'           => 'Export is completed',
-        'update_catalog_to_xml_confirm' => 'Run export catalog?',
+        'export_is_completed'           => 'Экспарт паспяхова завершаны!',
+        'update_catalog_to_xml_confirm' => 'Усе тавары будуць экспартаваныя ў вашу VK краму. Працягнуць?',
     ],
 ];
